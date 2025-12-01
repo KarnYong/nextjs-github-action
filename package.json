@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:push:prod": "npx dotenv-cli -e .env.production -- prisma db push",
+    "db:seed:prod": "npx dotenv-cli -e .env.production -- prisma db seed",
+    "db:studio:prod": "npx dotenv-cli -e .env.production -- prisma studio"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.0.1",
@@ -21,6 +24,7 @@
     "@types/node": "^20.19.25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.5",
     "prisma": "^7.0.1",
